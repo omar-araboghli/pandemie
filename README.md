@@ -24,20 +24,30 @@ A detailed how-to-run description can be found in [how-to-run-manual](https://gi
 ## How to Run
 * Clone the repository 
     
-    > git clone https://gitlab.com/omar.araboghli/pandemie.git
+    ``` 
+    git clone https://gitlab.com/omar.araboghli/pandemie.git
+    ```
 * `TODO:` [Download](here the download link) the trained model provided by us and add it to `pandemie/backend`
 
-    > mv path/to/downloaded/file `path/to/pandemie`/backend
+     ```
+     mv path/to/downloaded/file `path/to/pandemie`/backend
+     ```
 * Change into pandemie directory
     
-    > cd pandemie
+     ```
+    cd pandemie
+    ```
 * Build the containers
     
-    > docker-compose build
+    ```
+    docker-compose build
+    ```
 * Run the images
 
-    > docker-compose up
-
+    ```
+    docker-compose up
+    ```
+    
 If everything is ok, the terminal will prompt you that the backend and the frontend images are running on
 `localhost:50123` and `localhost:80`, respectively.
 
@@ -45,9 +55,13 @@ If everything is ok, the terminal will prompt you that the backend and the front
 If you only want to test our backend web service implementation you can 
 let the client send a POST request to the endpoint `http://localhost:50123/play`.
 * Windows 
-    > ic20_windows.exe -t 0 -u http://localhost:50123/play
+    ```
+    ic20_windows.exe -t 0 -u http://localhost:50123/play
+    ```
 * Linux 
-    > ./ic20_linux -t 0 -u http://localhost:50123/play
+    ```
+    ./ic20_linux -t 0 -u http://localhost:50123/play
+    ```
 
 Otherwise, you can test our pandemic simulation by calling the `localhost:80` on the browser and pressing the **start game** button!
 
