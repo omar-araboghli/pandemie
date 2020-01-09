@@ -8,9 +8,11 @@ competition in Germany.
 * [Requirements](#requirements)
 * [How to Run](#how-to-run)
 * [Usage](#usage)
+* [Theoretical Overview](#theoretical-overview)
 * [Technical Documentation](#technical-documentation)
-    * Backend
-    * Frontend
+    * [Backend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Backend)
+    * [Frontend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Frontend)
+* [Contributors](#contributors)
 
 ## Requirements
 Since the project is containerized in two docker images, you only need to have the following installed on your local machine:
@@ -67,6 +69,16 @@ Otherwise, you can test our pandemic simulation by calling the `localhost:80` on
 
 For more details, please check the [usage-manual](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Usage).
 
-## [Technical Documentation](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation)
-[Here](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation) is a detailed description of the
-technichal documentation for each of the backend and the frontend part of the project.
+## Theoretical Overview
+We are representing a solution using a Reinforcement Deep Q-Learning method.
+If you are interested in how we solved this problem in details, we recommend to get started
+in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/Introdcution)!
+
+## Technical Documentation
+A detailed description of the technichal documentation could be find
+for the [Backend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Backend)
+as well as for the [Frontend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Frontend).
+
+## Contributors
+All rights are reserved for the Computer Science Master students **Omar Arab Oghli** and **Muaid Mughrabi**
+of Gottfried Wilhelm Leibniz University of Hannover
