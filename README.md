@@ -21,7 +21,7 @@ Since the project is containerized in two docker images, you only need to have t
 * `docker-compose`
 
 You can surely run the software without having `docker-compose` or even `docker` installed by running each image individually.
-A detailed how-to-run description can be found in [how-to-run-manual](https://gitlab.com/omar.araboghli/pandemie/-/wikis/How-to-Run). 
+A detailed how-to-run description can be found in [how-to-run-manual](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Usage/00.-How-to-Run). 
 
 ## How to Run
 * Clone the repository 
