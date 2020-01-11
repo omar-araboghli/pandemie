@@ -8,6 +8,7 @@ competition in Germany.
 * [Requirements](#requirements)
 * [How to Run](#how-to-run)
 * [Usage](#usage)
+* [Software Architecture](#software-architecture)
 * [Theoretical Overview](#theoretical-overview)
 * [Technical Documentation](#technical-documentation)
     * [Backend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Backend)
@@ -68,6 +69,9 @@ let the client send a POST request to the endpoint `http://localhost:50123/play`
 Otherwise, you can test our pandemic simulation by calling the `localhost:80` on the browser and pressing the **start game** button!
 
 For more details, please check the [usage-manual](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Usage).
+
+## Software Architecture
+Interested in how all components are connected to each other ? Then hurry up and visit this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Software-Architecture)!
 
 ## Theoretical Overview
 We are representing a solution using a Reinforcement Deep Q-Learning method.
