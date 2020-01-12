@@ -1,7 +1,7 @@
 # Pandemie
 
 A solution for the Pandemie problem given within the [InformatiCup2020](https://github.com/informatiCup/informatiCup2020)
-competition in Germany.
+competition.
 
 
 ## Table of Contents
@@ -71,7 +71,7 @@ Otherwise, you can test our pandemic simulation by calling the `localhost:80` on
 For more details, please check the [usage-manual](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Usage).
 
 ## Software Architecture
-Interested in how all components are connected to each other ? Then hurry up and visit this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Software-Architecture)!
+Interested in how all components are connected to each other ? Then visit this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Software-Architecture)!
 
 ## Theoretical Overview
 We are representing a solution using a Reinforcement Deep Q-Learning method.
@@ -79,7 +79,7 @@ If you are interested in how we solved this problem in details, we recommend to 
 in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/Introdcution)!
 
 ## Technical Documentation
-A detailed description of the technichal documentation could be find
+A detailed description of the technichal documentation could be found
 for the [Backend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Backend)
 as well as for the [Frontend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Frontend).
 
