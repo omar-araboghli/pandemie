@@ -77,7 +77,7 @@ Interested in how all components are connected to each other ? Then visit this [
 ## Theoretical Overview
 We are representing a solution using a Reinforcement Deep Q-Learning method.
 If you are interested in how we solved this problem in details, we recommend to get started
-in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/Introdcution)!
+in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/Introduction)!
 
 ## Technical Documentation
 A detailed description of the technichal documentation could be found
