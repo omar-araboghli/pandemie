@@ -30,12 +30,13 @@ If you want to enjoy our pandemic simulation go [here]() `TODO`
 For more run options, please check the [how-to-run-manual](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Usage/00.-How-to-Run).
 
 ## Software Architecture
-Interested in how all components are connected to each other ? Then visit this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Software-Architecture)!
+This [section](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Software-Architecture) describes the different used components and
+how they communicate with each other.
 
 ## Theoretical Overview
 We are representing a solution using a Reinforcement Deep Q-Learning method.
 If you are interested in how we solved this problem in details, we recommend to get started
-in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/Introduction)!
+in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/01.-Introduction).
 
 ## Technical Documentation
 A detailed description of the technichal documentation could be found
