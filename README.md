@@ -5,14 +5,12 @@ competition.
 
 
 ## Table of Contents
-* [Requirements](#requirements)
 * [How to Run](#how-to-run)
 * [Software Architecture](#software-architecture)
 * [Theoretical Overview](#theoretical-overview)
 * [Technical Documentation](#technical-documentation)
     * [Backend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Backend)
     * [Frontend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Frontend)
-* [Contributors](#contributors)
 * [Wiki](#wiki)
 
 ## How to Run
@@ -43,10 +41,6 @@ in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Ov
 A detailed description of the technichal documentation could be found
 for the [Backend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Backend)
 as well as for the [Frontend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Frontend).
-
-## Contributors
-All rights are reserved for the Computer Science Master students **Omar Arab Oghli** and **Muaid Mughrabi**
-of Gottfried Wilhelm Leibniz University of Hannover.
 
 ## Wiki
 For more information please visit our [Wiki](https://gitlab.com/omar.araboghli/pandemie/-/wikis).
