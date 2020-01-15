@@ -43,4 +43,4 @@ for the [Backend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-D
 as well as for the [Frontend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Frontend).
 
 ## Wiki
-For more information please visit our [Wiki](https://gitlab.com/omar.araboghli/pandemie/-/wikis).
+For more information please visit our [Wiki](https://gitlab.com/omar.araboghli/pandemie/-/wikis/pages).
