@@ -9,8 +9,6 @@ competition.
 * [Software Architecture](#software-architecture)
 * [Theoretical Overview](#theoretical-overview)
 * [Technical Documentation](#technical-documentation)
-    * [Backend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Backend)
-    * [Frontend](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Technical-Documentation/Frontend)
 * [Wiki](#wiki)
 
 ## How to Run
