@@ -1,0 +1,23 @@
+{
+    "mode_help": "mode to run program, either 'load' pretrained model, 'pretrain' from a folder, or 'none' to start training directly",
+    "mode": "none",
+
+    "modelPath_help": "path to trained model to be loaded",
+    "modelPath": "./model.h5",
+
+    "pretrainPath_help": "path to pretrain directory",
+    "pretrainPath": "./validatedRandomWalkerReduced",
+
+    "batch_size": 32,
+
+    "episodes_help": "number of games to train on",
+    "episodes": 200,
+
+    "max_action_help": "max number of actions allowed in one game",
+    "max_action": 500,
+
+    "download_period": 3,
+
+    "non_valid_action_reward_help": "reward in case of invalid action",
+    "non_valid_action_reward": -1.0
+}

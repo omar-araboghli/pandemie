@@ -1,0 +1,16 @@
+.button {
+    text-align: center;
+}
+
+button {
+    border-radius:2em;
+     box-sizing: border-box;
+     text-decoration:none;
+     font-family:'Roboto',sans-serif;
+     font-weight:300;
+     color:#FFFFFF;
+     background-color:#4eb5f1;
+     text-align:center;
+     transition: all 0.2s;
+    block-size: 20px;
+    }

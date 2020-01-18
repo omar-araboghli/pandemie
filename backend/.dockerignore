@@ -1,0 +1,7 @@
+.vscode/
+jsons/
+.dockerignore
+.gitignore
+.gitlab-ci.yml
+delme.txt
+ic20_windows.exe

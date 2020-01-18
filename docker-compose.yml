@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  frontend:
+    build: ./frontend
+    image: frontend_image
+    ports:
+      - "80:80"
+    depends_on: 
+    - backend
+
+  backend:
+    build: ./backend
+    image: backend_image
+    command: bash -c "
+        python ./tests/run.py
+        && python ./app.py
+      "
+    ports:
+      - "443:443"
