@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import random
 import gym
 import numpy as np
@@ -29,7 +30,7 @@ class DQNAgent(Solver):
         self.action_size = len(self.possibleActions)
         self.memory = deque(maxlen=2000)
         self.gamma = 0.95    # discount rate
-        self.epsilon = 0.1  # exploration rate
+        self.epsilon = 1.0  # exploration rate
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.99
         self.learning_rate = 0.001
@@ -41,10 +42,13 @@ class DQNAgent(Solver):
         return K.sqrt(K.mean(K.square(y_pred - y_true))) 
 
     def _build_model(self):
+        # Neural Net for Deep-Q learning Model
+        #TODO: try sigmoid, tanh
         model = Sequential()
         model.add(Dense(3500, input_dim=self.stateSize, activation='tanh'))
         model.add(Dense(1000, activation='tanh'))
         model.add(Dense(2500, activation='tanh'))
+        #model.add(Dense(200000, activation='relu'))
         model.add(Dense(self.action_size, activation='linear'))
         model.compile(loss=self.root_mean_squared_error,
                       optimizer=Adam(lr=self.learning_rate))
@@ -57,17 +61,18 @@ class DQNAgent(Solver):
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
 
+    #TODO: move pretrain to another class, or make a suitable pre train data set
     def preTrain(self, dirPath):
-        # get the dataset
+        #get the dataset
         preTrainFilesPath = glob.glob(dirPath + '/*-inputVector')
         inputVectors = []
         labels = []
         for i in range(4500):
             preTrainFilePath = preTrainFilesPath[i]
-            # input vector
+            #input vector
             inputVector = np.load(preTrainFilePath)
             inputVectors.append(inputVector)
-            # its label
+            #its label
             labelFileName = preTrainFilePath[:-12] + '-probVector'
             label = np.load(labelFileName)
             #only testing
@@ -77,19 +82,19 @@ class DQNAgent(Solver):
 
         inputVectorsNP = np.array(inputVectors)
         labelsNP = np.array(labels)
-        
         #train on the pretrain dataset
         self.model.fit(inputVectorsNP, labelsNP, epochs=3,validation_split=0.3)
         self.update_target_model()
 
     def act(self, state):
-        # check if points allow to do at least one action
+        #check if points allow to do at least one action, 0 is endRound id
         if int(self.game.points) < 3:
-            return 0 # endRoundResponse
+            return 0
 
         if np.random.rand() <= self.epsilon:
             randomValidAction = self.getRandomValidAction(self.game)
             randomValidActionId = self.possibleActions.index(randomValidAction)
+            #randomAction = random.randrange(self.action_size)
             return randomValidActionId
 
         return self.predict(state)  # returns action
@@ -103,18 +108,17 @@ class DQNAgent(Solver):
 
     def replay(self, batch_size):
         minibatch = random.sample(self.memory, batch_size)
-
         for state, action, reward, next_state, done in minibatch:
             target = self.model.predict(state)
             actionID = self.possibleActions.index(action)
-            
             if done:
                 target[0][actionID] = reward
             else:
+                # a = self.model.predict(next_state)[0]
                 t = self.target_model.predict(next_state)[0]
                 target[0][actionID] = reward + self.gamma * np.amax(t)
+                # target[0][action] = reward + self.gamma * t[np.argmax(a)]
             self.model.fit(state, target, epochs=1, verbose=0)
-
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
 

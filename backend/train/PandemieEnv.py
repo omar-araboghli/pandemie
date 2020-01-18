@@ -2,6 +2,7 @@ import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
 
+
 import subprocess
 import sys
 import os, signal
@@ -34,6 +35,7 @@ class PandemieEnv(gym.Env):
         self.converter = Converter()
         self.communicator = WebServer()
         self.clientThread = None
+        
  
     def step(self, action):
         if not action.isValidInContextOf(self.game):
@@ -41,7 +43,6 @@ class PandemieEnv(gym.Env):
 
         nextStateJson = self.communicator.sendMessage(action.respond())
         self.game = self.converter.convertGame(nextStateJson) 
-
         #evaluate the resulting model
         observation = self.game
         done = self.game.isOver()
@@ -52,7 +53,7 @@ class PandemieEnv(gym.Env):
         if action.type == 'endRound':
             self.lastRoundOverallInfected = self.game.getOverallInfected()
             self.lastRoundPopulation = self.game.getOverallPopulation()
-
+        #print("current reward is :", reward)
         info = {}
         #get the current population
         self.currentPopulation = self.game.getOverallPopulation()
@@ -75,7 +76,11 @@ class PandemieEnv(gym.Env):
         self.lastRoundOverallInfected = self.game.getOverallInfected()
         self.lastRoundPopulation = self.game.getOverallPopulation()
         return self.game
+        
+    def render(self, mode='human', close=False):
+        pass
 
+	
     def _getReward(self, outcome, action):
         if outcome == "win":
             return 300 - int(self.game.round)
@@ -87,6 +92,21 @@ class PandemieEnv(gym.Env):
         pn = self.game.getOverallPopulation()
         reward = (deltaPopulation - deltaInfected) / pn
         print("dP = {}, dIP={}, pn={} , reward={}".format(deltaPopulation, deltaInfected, pn , reward))
+        #lateGameFactor = self.startPopulation / self.game.getOverallPopulation()
+        #correctionFactor = -1 
+
+        #if deltaPopulation == 0:
+        #    deltaPopulation = 1
+
+        #if deltaInfected > 0 and deltaPopulation < 0:
+        #    correctionFactor = 1
+
+        #return correctionFactor * (deltaInfected/deltaPopulation) * lateGameFactor
+
+        #another function to be tries later
+        #(x**3 + y **3 ) ** (1/3)
+        #p3ip3 = (deltaInfected**3 + deltaPopulation**3)
+        #return (-1) * np.sign(p3ip3) *(abs(p3ip3) ** (1. / 3))
 
         return reward
 
@@ -98,3 +118,27 @@ class PandemieEnv(gym.Env):
             elif 'Linux' in platform.system():
                 # send termination signal to the thread in order to be killed
                 os.system('kill -9 {}'.format(thread.pid))
+
+
+
+'''
+if __name__ == '__main__':
+    env = PandemieEnv()
+    for i_episode in range(200):
+        observation = env.reset()
+        for t in range(100):
+            endRound = EndRoundResponse()
+            try:
+                observation, reward, done, info = env.step(endRound)
+            except:
+                observation = env.reset()
+                t = 0 
+            #print(done)
+            if done:
+                print("episode {} finished in {} iterations".format(i_episode, t+1))
+                break
+    # kill last client and close connection
+    env.killThread(env.clientThread)
+    env.communicator.endConnection()
+
+'''

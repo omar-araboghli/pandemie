@@ -19,5 +19,5 @@
     "download_period": 3,
 
     "non_valid_action_reward_help": "reward in case of invalid action",
-    "non_valid_action_reward": -1.0
+    "non_valid_action_reward": -100.0
 }

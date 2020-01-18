@@ -48,3 +48,13 @@ class WebServer:
 
     def endConnection(self):
         self.request.close()
+
+def test():
+    server = WebServer()
+    while True:
+        with open("MyFile.txt", "a") as json_file:
+            msg = server.recieveMessage()
+            json.dump(msg, json_file, indent=4)
+            server.sendMessage({'type': 'endRound'})
+
+#test()
