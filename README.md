@@ -23,7 +23,7 @@ competition.
     ./ic20_linux -t 0 -u http://ec2-18-208-197-210.compute-1.amazonaws.com:443/play
     ```
 ### Frontend
-If you want to enjoy our pandemic simulation go [here](ec2-18-208-197-210.compute-1.amazonaws.com)
+If you want to enjoy our pandemic simulation go [here](http://ec2-18-208-197-210.compute-1.amazonaws.com)
 
 For more run options, please check the [how-to-run-manual](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Usage/00.-How-to-Run).
 
