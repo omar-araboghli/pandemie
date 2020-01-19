@@ -38,7 +38,7 @@ If you are interested in how we solved this problem in details, we recommend to 
 in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/01.-Introduction).
 
 ## Future Works
-Due to time constraints many other plans that unfortunately could't be applied are discussed
+Due to time constraints many other plans that unfortunately couldn't be applied are discussed
 in this [section](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/06.-Future-Work).
 
 ## Technical Documentation
