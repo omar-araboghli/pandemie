@@ -8,6 +8,7 @@ competition.
 * [How to Run](#how-to-run)
 * [Software Architecture](#software-architecture)
 * [Theoretical Overview](#theoretical-overview)
+* [Future Works](#future-works)
 * [Technical Documentation](#technical-documentation)
 * [Wiki](#wiki)
 
@@ -35,6 +36,10 @@ how they communicate with each other.
 We are representing a solution using a Reinforcement Deep Q-Learning method.
 If you are interested in how we solved this problem in details, we recommend to get started
 in this [page](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/01.-Introduction).
+
+## Future Works
+Due to time constraints many other plans that unfortunately could't be applied are discussed
+in this [section](https://gitlab.com/omar.araboghli/pandemie/-/wikis/Theoretical-Overview/06.-Future-Work).
 
 ## Technical Documentation
 A detailed description of the technichal documentation could be found
